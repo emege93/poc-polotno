@@ -15,6 +15,7 @@ import {observer} from "mobx-react-lite";
 import {DEFAULT_SECTIONS} from "polotno/side-panel";
 import {TemplatesSection} from "components/templates-panel";
 import {UploadPanel} from "components/UploadPanel";
+import {GridSection} from "components/Grid";
 
 const store = createStore({
     key: "nFA5H9elEytDyPyvKL7T", // you can create it here: https://polotno.com/cabinet/
@@ -150,7 +151,7 @@ const UploadSection = DEFAULT_SECTIONS.find((section) => section.name === "uploa
 UploadSection.Panel = UploadPanel;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const sections: any = [...DEFAULT_SECTIONS, CustomSection, TemplatesSection];
+const sections: any = [...DEFAULT_SECTIONS, CustomSection, TemplatesSection, GridSection];
 
 const PolotnoPage = (): React.ReactElement => {
     return (
